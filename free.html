@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free verse</title>
+    <link rel="icon" type="image/x-icon" href="pictures/favicon.ico">
+    <link rel="stylesheet" href="poetry_style.css">
+</head>
+<body>
+
+  <!-- The header -->
+  <header>
+    <h3 class="poemsName"><a href="index.html">Poems</a></h3>
+    <h3 class="pageTitle">Free verse</h3>
+    <h3 class="searchFunction">
+      <input class="input" id="searchWord">
+      <button class="searchButton" type="button" onclick="toSearchPage()">Search</button>
+    </h3>
+  </header>
+
+  <script src="poems.js"></script>
+  <script src="sortpoems.js"></script>
+  <script src="publishpoems.js"></script>
+  <script>
+
+    // Array with all poems
+    const thePoems = allPoemsArray();
+
+    // Array with the poems belonging to this page
+    const freePoems = wantedPoems(thePoems, "free");
+
+    // Publish all the wanted poems on the page
+    for(let i = 0; i < freePoems.length; i++){
+      addPoemToPage(freePoems[i]);
+    }
+
+    // Makes it possible to search with enter, not just button
+    document.getElementById("searchWord").addEventListener('keypress', function(event) {
+      if (event.keyCode == 13) {
+           toSearchPage();
+        }
+      });
+
+    
+    // Store the search word in the web storage and go to search result page
+    function toSearchPage() {
+
+      // Getting the users input value
+      let searchedWord = document.getElementById("searchWord").value;
+
+      // Using web storage to store the word, for this session
+      sessionStorage.setItem("lookingFor", searchedWord);
+
+      // Go to the search result page
+      window.location.href="search_results.html";
+    }
+
+  </script>
+</body>
+</html>

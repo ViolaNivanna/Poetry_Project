@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link rel="icon" type="image/x-icon" href="pictures/favicon.ico">
+    <link rel="stylesheet" href="poetry_style.css">
+</head>
+<body>
+
+  <!-- The header -->
+  <header>
+    <h3 class="poemsName"><a href="index.html">Poems</a></h3>
+    <h3 class="pageTitle">Search Results</h3>
+    <h3 class="searchFunction">
+      <input class="input" id="searchWord">
+      <button class="searchButton" type="button" onclick="searchResults()">Search</button>
+    </h3>
+  </header>
+
+  <!-- div holding all results, get emptied for each search -->
+  <div id="hold"></div>
+
+  <script src="poems.js"></script>
+  <script src="poemfinder.js"></script>
+  <script src="publishpoems.js"></script>
+  <script>
+
+    // Search from another page
+    let getSearchedWord = sessionStorage.getItem("lookingFor");
+    showResults(getSearchedWord);
+
+
+    // If the user search for poems on the search page
+    function searchResults() {
+
+      let searchValue = document.getElementById("searchWord").value;
+      showResults(searchValue);
+    }
+
+    // Makes it possible to search with enter, not just button
+    document.getElementById("searchWord").addEventListener('keypress', function(event) {
+      if (event.keyCode == 13) {
+        searchResults();
+        }
+      });
+      
+
+    // Publishing the poems matching a given search word
+    function showResults(theSearchWord) {
+
+      // Making sure the hold div is empty before adding the result
+      const myNode = document.getElementById("hold");
+      myNode.innerHTML = "";
+
+      // Array with all poems
+      const thePoems = allPoemsArray();
+      
+      // Array with the poems matching the search
+      const searchResult = poemfinder(thePoems, theSearchWord);
+
+      // Publish all poems matching the search. If there is no match, give message
+      if (searchResult.length == 0) {
+        // create an element with the message and add to myNode
+        const attNoResults = document.createAttribute("class");
+        attNoResults.value = "noResults";
+
+        const theElement = document.createElement("h3");
+        theElement.innerHTML = "You can come up with a good ''No results'' message, honey <3";
+        theElement.setAttributeNode(attNoResults);
+        
+        myNode.appendChild(theElement);
+
+      } else {
+        for (let i = 0; i < searchResult.length; i ++) {
+          myNode.appendChild(addPoemToPage(searchResult[i]));
+        }
+      }
+    }
+    
+  </script>
+</body>
+</html>

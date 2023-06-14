@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poetry Project</title>
+    <link rel="icon" type="image/x-icon" href="pictures/favicon.ico">
+    <link rel="stylesheet" href="poetry_style.css">
+</head>
+<body>
+
+  <!-- The header -->
+  <header>
+    <h3 class="poemsName">Poems</h3>
+    <h3 class="pageTitle"><a href="switch.html">Change theme</a></h3>
+    <h3 class="searchFunction">
+      <input class="input" id="searchWord">
+      <button class="searchButton" type="button" id="button" onclick="toSearchPage()">Search</button>
+    </h3>
+  </header>
+
+  <!-- The birch picture with overlying haiku -->
+  <div class="birchPicture">
+    <div class="overlaidHaiku">
+      <p> <br> word word <br> word word word <br> word <br><br> </p>
+    </div>
+  </div>
+
+  <!-- The about section with links to the poem pages -->
+  <div class="aboutsection">
+    <h4>ABOUT</h4>
+    <p>Text text text text text text text text text text text text text text text text text text text text text text text text text</p>
+    <p>Text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text</p>
+    <p>Text text text text text text text text text text text text text text text text text text text text text text text text text</p>
+    <div class="aboutPoems">
+      <a href="haiku.html">Haiku</a>
+      <a href="free.html">Free verse</a>
+    </div>
+  </div>
+
+  <script>
+
+    // Makes it possible to search with enter, not just button
+    document.getElementById("searchWord").addEventListener('keypress', function(event) {
+      if (event.keyCode == 13) {
+           toSearchPage();
+        }
+      });
+
+    // Store the search word in the web storage and go to search result page
+    function toSearchPage() {
+
+      // Getting the users input value
+      let searchedWord = document.getElementById("searchWord").value;
+
+      // Using web storage to store the word, for this session
+      sessionStorage.setItem("lookingFor", searchedWord);
+
+      // Go to the search result page
+      window.location.href="search_results.html";
+    }
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,178 @@
+/* General for all pages */
+* {
+    box-sizing: border-box;
+    border-radius: 0.2rem;
+}
+body {
+    background-color: rgb(189, 212, 229);
+}
+.riverBody {
+    background-color: rgb(202, 229, 189);
+}
+header {
+    background-color: rgb(1, 1, 1);
+    color: rgb(205, 234, 255);
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+/* For search form and button */
+header .searchFunction {
+    overflow: visible;
+    text-align: right;
+    width: 30%;
+}
+header .input {
+    background-color: rgb(189, 212, 229);
+    font-weight: bold;
+    border-color: rgb(205, 234, 255);
+    padding-left: 0.2rem;
+    width: 100%;
+    max-width: 6rem;
+}
+header .searchButton {
+    background-color: rgb(189, 212, 229);
+    font-weight: bold;
+    border-color: rgb(205, 234, 255);
+}
+header .pageTitle{
+    margin: auto;
+}
+header .poemsName {
+    width: 30%;
+    overflow: visible;
+}
+header a {
+    color: rgb(205, 234, 255);
+    text-decoration-line: underline;
+}
+header a:hover {
+    text-decoration-line: none;
+}
+.riverHeader h3, .riverHeader a {
+    color: rgb(202, 229, 189);
+}
+
+
+/* My birch picture with overlying haiku */
+.birchPicture {
+    background-image: url("pictures/mybirch.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 4rem;
+}
+/* His river birch picture */
+.riverBirchPicture {
+    background-image: url("pictures/riverbirchsmall.jpg");
+    padding: 4rem;
+}
+.overlaidHaiku {
+    background-color: rgba(240, 248, 255, 0.726);
+    width: fit-content;
+    margin: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.riverOverlaidHaiku {
+    background-color: rgba(202, 229, 189, 0.767);
+    width: fit-content;
+    margin: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* The about section */
+.aboutsection {
+    background-color: rgb(162, 175, 229);
+    width: fit-content;
+    margin: auto;
+    margin-top: 1rem;
+    text-align: center;
+    padding: 0 0.5rem 0 0.5rem;
+}
+.riverAboutsectionColor {
+    background-color: rgb(187, 184, 148);
+}
+.aboutsection h4 {
+    color: rgb(1, 1, 1);
+    padding-top: 0.5rem;
+}
+.aboutPoems {
+    margin: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: bold;
+}
+.aboutPoems a {
+    color: rgb(81, 75, 155);
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+    text-decoration-line: underline;
+}
+.aboutPoems a:hover {
+    color: brown;
+    text-decoration-line: none;
+}
+.riverAboutPoems a {
+    color: rgb(90, 83, 16);
+}
+
+
+/* For the poems and the "no results" message */
+.poemCard, .noResults{
+    background-color: rgba(162, 175, 229, 0.441);
+    margin: auto;
+    margin-top: 0.5rem;
+    padding: 0.25rem 0.4rem 0 0.4rem;
+    width: 40%;
+    text-align: center;
+}
+.noResults {
+    color: rgb(81, 75, 155);
+    text-align: center;
+    margin-top: 4rem;
+    padding: 1.5rem;
+    width: fit-content;
+}
+.poemTitle {
+    color: rgb(81, 75, 155);
+    margin-bottom: 0.5rem;
+}
+.poemTextdiv {
+    width: fit-content;
+    max-width: 50%;
+    margin: auto;
+}
+.poemText {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(1, 1, 1);;
+}
+.poemDate {
+    color: rgba(82, 75, 155, 0.830);
+    padding-top: 0.5rem;
+    font-weight: bold;
+    font-style: italic;
+    font-size: small;
+}
+.poemKeywords {
+    color: rgb(230, 245, 255);
+    padding-bottom: 1.5rem;
+}
+.readButton {
+    background-color: rgb(162, 175, 229);
+    border-color: rgb(230, 245, 255);
+    margin-top: 0.4rem;
+    padding: 0.1rem 0.2rem 0.1rem 0.2rem;
+}
+
+
+/* Responsive */
+@media screen and (max-width: 800px) {
+
+    /* For the cards containing poems */
+    .poemCard{
+        width: 100%;
+    }
+}
