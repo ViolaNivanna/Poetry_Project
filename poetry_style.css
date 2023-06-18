@@ -4,19 +4,28 @@
     border-radius: 0.2rem;
 }
 body {
+    font-family: cursive; /* An option */
+    font-family: Verdana, Geneva, Tahoma, sans-serif; /* For poems only? */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Most likely */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Basic Good */
+    font-family: 'Times New Roman', Times, serif; /* Nah */
+}
+/* Theme background color */
+.winterBody {
     background-color: rgb(189, 212, 229);
 }
-.riverBody {
+.summerBody {
     background-color: rgb(202, 229, 189);
 }
+
 header {
     background-color: rgb(1, 1, 1);
-    color: rgb(205, 234, 255);
+    color: rgb(205, 234, 255); /* Theme */
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 /* For search form and button */
 header .searchFunction {
@@ -25,17 +34,22 @@ header .searchFunction {
     width: 30%;
 }
 header .input {
-    background-color: rgb(189, 212, 229);
     font-weight: bold;
-    border-color: rgb(205, 234, 255);
     padding-left: 0.2rem;
     width: 100%;
     max-width: 6rem;
 }
 header .searchButton {
+    font-weight: bold; 
+}
+/* Theme search colors */
+.winterSearch {
     background-color: rgb(189, 212, 229);
-    font-weight: bold;
     border-color: rgb(205, 234, 255);
+}
+.summerSearch {
+    background-color: rgb(202, 229, 189);
+    border-color: rgb(202, 229, 189);
 }
 header .pageTitle{
     margin: auto;
@@ -45,56 +59,59 @@ header .poemsName {
     overflow: visible;
 }
 header a {
-    color: rgb(205, 234, 255);
     text-decoration-line: underline;
 }
 header a:hover {
     text-decoration-line: none;
 }
-.riverHeader h3, .riverHeader a {
+/* Theme header color */
+.winterHeader h3, .winterHeader a {
+    color: rgb(205, 234, 255);
+}.summerHeader h3, .summerHeader a {
     color: rgb(202, 229, 189);
 }
 
-
-/* My birch picture with overlying haiku */
-.birchPicture {
+/* Theme pictures with overlying haiku */
+.winterPicture {
     background-image: url("pictures/mybirch.png");
     background-size: cover;
     background-repeat: no-repeat;
     padding: 4rem;
 }
-/* His river birch picture */
-.riverBirchPicture {
+.summerPicture {
     background-image: url("pictures/riverbirchsmall.jpg");
     padding: 4rem;
 }
 .overlaidHaiku {
-    background-color: rgba(240, 248, 255, 0.726);
     width: fit-content;
     margin: auto;
     padding-left: 1rem;
     padding-right: 1rem;
 }
-.riverOverlaidHaiku {
+/* Theme OverlaidHaiku background color*/
+.winterOverlaidHaiku {
+    background-color: rgba(240, 248, 255, 0.726);
+}
+.summerOverlaidHaiku {
     background-color: rgba(202, 229, 189, 0.767);
-    width: fit-content;
-    margin: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
 }
 
 /* The about section */
 .aboutsection {
-    background-color: rgb(162, 175, 229);
     width: fit-content;
     margin: auto;
     margin-top: 1rem;
     text-align: center;
     padding: 0 0.5rem 0 0.5rem;
 }
-.riverAboutsectionColor {
+/* Theme about section background color*/
+.winterAboutsectionColor {
+    background-color: rgb(162, 175, 229);
+}
+.summerAboutsectionColor {
     background-color: rgb(187, 184, 148);
 }
+
 .aboutsection h4 {
     color: rgb(1, 1, 1);
     padding-top: 0.5rem;
@@ -106,7 +123,6 @@ header a:hover {
     font-weight: bold;
 }
 .aboutPoems a {
-    color: rgb(81, 75, 155);
     padding-top: 0.5rem;
     padding-bottom: 1rem;
     text-decoration-line: underline;
@@ -115,9 +131,14 @@ header a:hover {
     color: brown;
     text-decoration-line: none;
 }
-.riverAboutPoems a {
+/* Theme about poems link color */
+.winterAboutPoems a {
+    color: rgb(81, 75, 155);
+}
+.summerAboutPoems a {
     color: rgb(90, 83, 16);
 }
+
 
 
 /* For the poems and the "no results" message */
@@ -146,7 +167,7 @@ header a:hover {
     margin: auto;
 }
 .poemText {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /*font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
     color: rgb(1, 1, 1);;
 }
 .poemDate {

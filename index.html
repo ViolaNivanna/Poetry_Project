@@ -8,12 +8,11 @@
     <link rel="icon" type="image/x-icon" href="pictures/favicon.ico">
     <link rel="stylesheet" href="poetry_style.css">
 </head>
-<body>
+<body id="bodyTheme">
 
   <!-- The header -->
-  <header>
+  <header id="headerTheme">
     <h3 class="poemsName">Poems</h3>
-    <h3 class="pageTitle"><a href="switch.html">Change theme</a></h3>
     <h3 class="searchFunction">
       <input class="input" id="searchWord">
       <button class="searchButton" type="button" id="button" onclick="toSearchPage()">Search</button>
@@ -21,19 +20,19 @@
   </header>
 
   <!-- The birch picture with overlying haiku -->
-  <div class="birchPicture">
-    <div class="overlaidHaiku">
+  <div id="pictureTheme" >
+    <div id="overlaidTheme" class="overlaidHaiku">
       <p> <br> word word <br> word word word <br> word <br><br> </p>
     </div>
   </div>
 
   <!-- The about section with links to the poem pages -->
-  <div class="aboutsection">
+  <div id="aboutsectionTheme" class="aboutsection">
     <h4>ABOUT</h4>
     <p>Text text text text text text text text text text text text text text text text text text text text text text text text text</p>
     <p>Text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text</p>
     <p>Text text text text text text text text text text text text text text text text text text text text text text text text text</p>
-    <div class="aboutPoems">
+    <div id="aboutPoemsTheme" class="aboutPoems">
       <a href="haiku.html">Haiku</a>
       <a href="free.html">Free verse</a>
     </div>
@@ -59,6 +58,44 @@
 
       // Go to the search result page
       window.location.href="search_results.html";
+    }
+
+
+
+    // Change between winter and summer theme
+
+    // Function (arrayElements, arrayCSS) {loop,classList.add(id)}
+    const themeBody = document.getElementById("bodyTheme");
+    const themeHeader = document.getElementById("headerTheme");
+    const themePicture = document.getElementById("pictureTheme");
+    const themeOverlaid = document.getElementById("overlaidTheme");
+    const themeAboutsection = document.getElementById("aboutsectionTheme");
+    const themeAboutPoems = document.getElementById("aboutPoemsTheme");
+    const themeInput = document.getElementById("searchWord");
+    const themeButton = document.getElementById("button");
+
+    let myTheme = "summer";
+
+    if (myTheme == "summer") {
+      themeBody.classList.add("summerBody");
+      themeHeader.classList.add("summerHeader");
+      themePicture.classList.add("summerPicture");
+      themeOverlaid.classList.add("summerOverlaidHaiku");
+      themeAboutsection.classList.add("summerAboutsectionColor");
+      themeAboutPoems.classList.add("summerAboutPoems");
+      themeInput.classList.add("summerSearch");
+      themeButton.classList.add("summerSearch");
+
+
+    } else {
+      themeBody.classList.add("winterBody");
+      themeHeader.classList.add("winterHeader");
+      themePicture.classList.add("winterPicture");
+      themeOverlaid.classList.add("winterOverlaidHaiku");
+      themeAboutsection.classList.add("winterAboutsectionColor");
+      themeAboutPoems.classList.add("winterAboutPoems");
+      themeInput.classList.add("winterSearch");
+      themeButton.classList.add("winterSearch");
     }
 
   </script>
