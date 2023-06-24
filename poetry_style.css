@@ -10,17 +10,9 @@ body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Basic Good */
     font-family: 'Times New Roman', Times, serif; /* Nah */
 }
-/* Theme background color */
-.winterBody {
-    background-color: rgb(189, 212, 229);
-}
-.summerBody {
-    background-color: rgb(202, 229, 189);
-}
 
 header {
     background-color: rgb(1, 1, 1);
-    color: rgb(205, 234, 255); /* Theme */
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     display: flex;
@@ -42,15 +34,6 @@ header .input {
 header .searchButton {
     font-weight: bold; 
 }
-/* Theme search colors */
-.winterSearch {
-    background-color: rgb(189, 212, 229);
-    border-color: rgb(205, 234, 255);
-}
-.summerSearch {
-    background-color: rgb(202, 229, 189);
-    border-color: rgb(202, 229, 189);
-}
 header .pageTitle{
     margin: auto;
 }
@@ -64,12 +47,7 @@ header a {
 header a:hover {
     text-decoration-line: none;
 }
-/* Theme header color */
-.winterHeader h3, .winterHeader a {
-    color: rgb(205, 234, 255);
-}.summerHeader h3, .summerHeader a {
-    color: rgb(202, 229, 189);
-}
+
 
 /* Theme pictures with overlying haiku */
 .winterPicture {
@@ -88,13 +66,6 @@ header a:hover {
     padding-left: 1rem;
     padding-right: 1rem;
 }
-/* Theme OverlaidHaiku background color*/
-.winterOverlaidHaiku {
-    background-color: rgba(240, 248, 255, 0.726);
-}
-.summerOverlaidHaiku {
-    background-color: rgba(202, 229, 189, 0.767);
-}
 
 /* The about section */
 .aboutsection {
@@ -104,14 +75,6 @@ header a:hover {
     text-align: center;
     padding: 0 0.5rem 0 0.5rem;
 }
-/* Theme about section background color*/
-.winterAboutsectionColor {
-    background-color: rgb(162, 175, 229);
-}
-.summerAboutsectionColor {
-    background-color: rgb(187, 184, 148);
-}
-
 .aboutsection h4 {
     color: rgb(1, 1, 1);
     padding-top: 0.5rem;
@@ -131,19 +94,11 @@ header a:hover {
     color: brown;
     text-decoration-line: none;
 }
-/* Theme about poems link color */
-.winterAboutPoems a {
-    color: rgb(81, 75, 155);
-}
-.summerAboutPoems a {
-    color: rgb(90, 83, 16);
-}
 
 
 
 /* For the poems and the "no results" message */
 .poemCard, .noResults{
-    background-color: rgba(162, 175, 229, 0.441);
     margin: auto;
     margin-top: 0.5rem;
     padding: 0.25rem 0.4rem 0 0.4rem;
@@ -151,14 +106,12 @@ header a:hover {
     text-align: center;
 }
 .noResults {
-    color: rgb(81, 75, 155);
     text-align: center;
     margin-top: 4rem;
     padding: 1.5rem;
     width: fit-content;
 }
 .poemTitle {
-    color: rgb(81, 75, 155);
     margin-bottom: 0.5rem;
 }
 .poemTextdiv {
@@ -171,19 +124,15 @@ header a:hover {
     color: rgb(1, 1, 1);;
 }
 .poemDate {
-    color: rgba(82, 75, 155, 0.830);
     padding-top: 0.5rem;
     font-weight: bold;
     font-style: italic;
     font-size: small;
 }
 .poemKeywords {
-    color: rgb(230, 245, 255);
     padding-bottom: 1.5rem;
 }
 .readButton {
-    background-color: rgb(162, 175, 229);
-    border-color: rgb(230, 245, 255);
     margin-top: 0.4rem;
     padding: 0.1rem 0.2rem 0.1rem 0.2rem;
 }

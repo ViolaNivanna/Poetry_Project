@@ -8,31 +8,31 @@
     <link rel="icon" type="image/x-icon" href="pictures/favicon.ico">
     <link rel="stylesheet" href="poetry_style.css">
 </head>
-<body id="bodyTheme">
+<body>
 
   <!-- The header -->
-  <header id="headerTheme">
+  <header>
     <h3 class="poemsName">Poems</h3>
     <h3 class="searchFunction">
       <input class="input" id="searchWord">
-      <button class="searchButton" type="button" id="button" onclick="toSearchPage()">Search</button>
+      <button class="searchButton" type="button" onclick="toSearchPage()">Search</button>
     </h3>
   </header>
 
-  <!-- The birch picture with overlying haiku -->
-  <div id="pictureTheme" >
-    <div id="overlaidTheme" class="overlaidHaiku">
+  <!-- The picture with overlying haiku -->
+  <div id="pictureTheme">
+    <div class="overlaidHaiku">
       <p> <br> word word <br> word word word <br> word <br><br> </p>
     </div>
   </div>
 
   <!-- The about section with links to the poem pages -->
-  <div id="aboutsectionTheme" class="aboutsection">
+  <div class="aboutsection">
     <h4>ABOUT</h4>
     <p>Text text text text text text text text text text text text text text text text text text text text text text text text text</p>
     <p>Text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text</p>
     <p>Text text text text text text text text text text text text text text text text text text text text text text text text text</p>
-    <div id="aboutPoemsTheme" class="aboutPoems">
+    <div class="aboutPoems">
       <a href="haiku.html">Haiku</a>
       <a href="free.html">Free verse</a>
     </div>
@@ -64,29 +64,7 @@
 
 
     // Change between winter and summer theme
-    // The elements that are changing theme
-    const themeBody = document.getElementById("bodyTheme");
-    const themeInput = document.getElementById("searchWord");
-    const themeButton = document.getElementById("button");
-    const themeHeader = document.getElementById("headerTheme");
-    const themePicture = document.getElementById("pictureTheme");
-    const themeOverlaid = document.getElementById("overlaidTheme");
-    const themeAboutsection = document.getElementById("aboutsectionTheme");
-    const themeAboutPoems = document.getElementById("aboutPoemsTheme");
-    
-    // Object for the changeTheme function
-    let myObject = {
-      body: [themeBody, "winterBody", "summerBody"],
-      input: [themeInput, "winterSearch", "summerSearch"],
-      button: [themeButton, "winterSearch", "summerSearch"],
-      header: [themeHeader, "winterHeader", "summerHeader"],
-      picture: [themePicture, "winterPicture", "summerPicture"],
-      overlaid: [themeOverlaid, "winterOverlaidHaiku", "summerOverlaidHaiku"],
-      aboutsection: [themeAboutsection, "winterAboutsectionColor", "summerAboutsectionColor"],
-      aboutPoems: [themeAboutPoems, "winterAboutPoems", "summerAboutPoems"]
-    }
-
-    changeTheme(myObject);
+    changeTheme();
 
   </script>
 

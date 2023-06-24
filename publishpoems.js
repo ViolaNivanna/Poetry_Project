@@ -117,6 +117,6 @@ function addPoemToPage(thePoem){
   theCard.appendChild(showPoemPart("poemDate", "p", readableDate(thePoem.myDate)));        
   theCard.appendChild(showPoemPart("poemKeywords", "p", theKeywords));
 
-  // Returning the card div so the entire poem can be addes to other divs (search functionality)
+  // Returning the card div so the entire poem can be added to other divs (search functionality)
   return theCard;
 }
