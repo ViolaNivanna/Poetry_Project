@@ -6,7 +6,12 @@ One if for winter and summer, repetative code in the if, to be sure all get the 
 
 function changeTheme () {
 
-  let myTheme = "winter";
+  // The current date and the dates for vernal equinox and autumnal equinox
+  const currentDate = new Date();
+  const currentYear = currentDate.getFullYear();
+  const toSummer = new Date(currentYear, 2, 20, 23, 59, 59);
+  const toWinter = new Date(currentYear, 8, 22, 23, 59, 59);
+
 
   // For the poems
   const bodyElement = document.body;
@@ -18,8 +23,8 @@ function changeTheme () {
   const btnElements = document.getElementsByTagName("button");
   const inputElements = document.querySelectorAll("input");
 
-  
-  if (myTheme == "winter") {
+  // If current date is during the winter time, then winter theme
+  if (currentDate > toWinter || currentDate < toSummer) {
 
     // The body
     bodyElement.style.backgroundColor = "rgb(189, 212, 229)";
