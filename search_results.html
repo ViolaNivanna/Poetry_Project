@@ -39,12 +39,14 @@
 
       let searchValue = document.getElementById("searchWord").value;
       showResults(searchValue);
+      let inputField = document.getElementById("searchWord").value = "";
     }
 
     // Makes it possible to search with enter, not just button
     document.getElementById("searchWord").addEventListener('keypress', function(event) {
       if (event.keyCode == 13) {
         searchResults();
+        let inputField = document.getElementById("searchWord").value = "";
         }
       });
       

@@ -102,7 +102,7 @@ header a:hover {
     margin: auto;
     margin-top: 0.5rem;
     padding: 0.25rem 0.4rem 0 0.4rem;
-    width: 40%;
+    width: 100%;
     text-align: center;
 }
 .noResults {
@@ -139,10 +139,19 @@ header a:hover {
 
 
 /* Responsive */
-@media screen and (max-width: 800px) {
 
-    /* For the cards containing poems */
+/* For tablets */
+@media screen and (min-width: 600px) {
+
     .poemCard{
-        width: 100%;
+        width: 60%;
+    }
+}
+
+/* For desktop */
+@media screen and (min-width: 992px) {
+
+    .poemCard{
+        width: 40%;
     }
 }
