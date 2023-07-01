@@ -51,13 +51,13 @@ header a:hover {
 
 /* Theme pictures with overlying haiku */
 .winterPicture {
-    background-image: url("pictures/mybirch.png");
+    background-image: url("pictures/winterbirch.png");
     background-size: cover;
     background-repeat: no-repeat;
     padding: 4rem;
 }
 .summerPicture {
-    background-image: url("pictures/riverbirchsmall.jpg");
+    background-image: url("pictures/summerbirch.jpg");
     padding: 4rem;
 }
 .overlaidHaiku {
